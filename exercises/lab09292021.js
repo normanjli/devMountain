@@ -6,6 +6,8 @@
   If it is not, console log "Coding has its challenges."
 */
 
+const { channel } = require("diagnostics_channel");
+
 //CODE HERE
 let lovesCode = true;
 if (lovesCode === true) {
@@ -139,12 +141,24 @@ if (score >= 90){
 */
 
 //CODE HERE
-
+let changeMyMind = true
+console.log(changeMyMind)
+switch (changeMyMind){
+  case true:
+    changeMyMind = false;
+    break;
+  case false:
+    changeMyMind = true;
+    break;
+}console.log(changeMyMind)
 
 // Try to change the value of changeMyMind (irrespective of whether it is true or false) and then console.log it's new status. It should log true. Hint: use the not operator.
 
 //CODE HERE
 
+if (changeMyMind !== true){
+  changeMyMind = true
+}console.log (changeMyMind)
 
 
 
