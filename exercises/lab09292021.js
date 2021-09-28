@@ -7,19 +7,30 @@
 */
 
 //CODE HERE
-
+let lovesCode = true;
+if (lovesCode === true) {
+  console.log(`I love to code!`)
+}else{
+  console.log(`I guess you dont?`)
+}
 // For problems 2-3 use the following lines of code:
 var amysAge = 29
 var brittanisAge = 34
 var amysBirthYear = 1991
-var brittanisBirthYear = 1986
+var brittanisBirthYear = 1984
 
 ////////// PROBLEM 2 //////////
 
 /*
   Using an if statement and a comparison operator, create code that will check if Amy or Brittani is older, and then console.log '{name} is older'. Hint: Consider what will happen if they are the same age. Handle this situation.
 */
-
+if (amysAge > brittanisAge) {
+  console.log(`Amy is older`);
+}else if (brittanisAge > amysAge) {
+  console.log(`Brittani is older`);
+}else if (brittanisAge == amysAge) {
+  console.log(`They're the same age!`);
+}
 //CODE HERE
 
 
@@ -28,7 +39,11 @@ var brittanisBirthYear = 1986
 /*
   Using an if statement and a comparison operator, create code that will check if Amy and Brittani were born in the same year. If they were, console.log 'Amy & Brittani were born in the same year'. If they were not, console.log 'Amy & Brittani were not born in the same year'
 */
-
+if (amysBirthYear == brittanisBirthYear) {
+  console.log(`Amy & Brittani were born in the same year`)
+}else{
+  console.log(`Amy & Brittani were not born in the same year`)
+}
 //CODE HERE
 
 
@@ -40,7 +55,8 @@ var arr = [10,20,30,40,50,60]
 /*
   Create a variable named 'firstItem' and set it equal to the first value of the 'arr' array.
 */
-
+var firstItem = arr[0]
+console.log(firstItem)
 //Code Here
 
 
@@ -48,7 +64,10 @@ var arr = [10,20,30,40,50,60]
 /*
   Remove the last item from the 'arr' array and store it in a variable named 'lastItemRemoved'. Console.log the array to verify you no longer have the last item.
 */
-
+let n = arr.length
+let lastItemRemoved = arr.pop()
+console.log(arr)
+console.log(lastItemRemoved)
 //Code Here
 
 ////////// PROBLEM 6 //////////
@@ -60,7 +79,11 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
 /*
   Loop through the 'family' array and console.log every item.
 */
-
+let fam = (family.length)
+while ( fam != 0) {
+  console.log(family[fam-1])
+  fam--
+}
 //Code Here
 
 
