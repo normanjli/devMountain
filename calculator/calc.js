@@ -8,7 +8,7 @@ const reader = readline.createInterface({
 
 
 reader.question("What would you like to calculate?", function(input){
-	let tokens = input.split(',');
+	let tokens = input.split(`,`);
 	//console.log (tokens)
 	let mathSymbol = tokens[0];
 	let num1 = Number(tokens[1]);
@@ -26,7 +26,7 @@ reader.question("What would you like to calculate?", function(input){
 	}else if (mathSymbol === `/`){
 		console.log(num1/num2);
 
-	}else if (mathSymbol === `**`){
+	}else if (mathSymbol === `^/`){
 		console.log(num1**.5);
 	
 	}else{
