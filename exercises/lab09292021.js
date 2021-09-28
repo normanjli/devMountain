@@ -141,15 +141,12 @@ if (score >= 90){
 */
 
 //CODE HERE
-let changeMyMind = true
+let changeMyMind = false
 console.log(changeMyMind)
-switch (changeMyMind){
-  case true:
-    changeMyMind = false;
-    break;
-  case false:
-    changeMyMind = true;
-    break;
+if (changeMyMind) {
+  changeMyMind = false;
+} else {
+  changeMyMind = true;
 }console.log(changeMyMind)
 
 // Try to change the value of changeMyMind (irrespective of whether it is true or false) and then console.log it's new status. It should log true. Hint: use the not operator.
@@ -165,13 +162,14 @@ if (changeMyMind !== true){
 ////////// PROBLEM 10 //////////
 
 // Do not edit the code below.
-var myFavoriteNumbers = [4,8,12,16,20,24];
+var myFavoriteNumbers = [4,8,12,16,20,24,60];
 // Do not edit the code above.
 
 /*
   Create a variable named 'someNum' and set it equal to the fifth value of the 'myFavoriteNumbers' array.
 */
-
+let someNum = myFavoriteNumbers[4]
+console.log(someNum)
 //Code Here
 
 
@@ -180,7 +178,11 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 // Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
 
 //Code Here
-
+if (myFavoriteNumbers.length < 7){
+  console.log(`there aren't enough elements in this array`)
+}else{
+  someNum = myFavoriteNumbers[6]
+}console.log(someNum)
 
 ////////// PROBLEM 11 //////////
 
@@ -191,8 +193,11 @@ var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
-
-
+let xi = listOfNumbers.length 
+for (xi-1 ; xi >0; xi--){
+  if (listOfNumbers[xi]%3 == 0){
+    console.log(`${listOfNumbers[xi]} is divisible by three.`)
+  }}
 ////////// PROBLEM 12 //////////
 // Do not edit the code below.
 var letters = ['A', 'B', 'C', 'D', 'E'];
@@ -201,7 +206,10 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 /*
   Loop backwards, starting at the end of the 'letters' array. Console log every item in the array.
 */
-
+let xii = letters.length 
+for (xii-1 ; xii >0; xii--){
+  console.log(letters[xii-1])
+}
 //Code Here
 
 
@@ -211,7 +219,7 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 // Switch statements can be excellent alternatives to for loops. Look up switch statements (I recommend W3 Schools) and try to implement one for the following.
 
 // Do not edit the code below.
-let letterGrade = 'B'
+let letterGrade = `a`
 // Do not edit the code above.
 
 /* Use a switch statement on 'letterGrade' and console.log the appropriate response.
@@ -223,7 +231,25 @@ If D: "The student is not doing very well."
 If F: "The student is failing."
 If the letter grade is not one of the above letters, console.log 'Not an eligible grade.'
 */
-
+switch (letterGrade){
+  case `A`:
+    console.log(`The student is doing excellently.`)
+    break;
+  case `B`:
+    console.log(`The student is doing Well.`)
+    break;
+  case `C`:
+      console.log(`The student is doing alright.`)
+      break;
+  case `D`:
+    console.log(`The student is not doing very well.`)
+    break;
+  case `F`:
+      console.log(`The student is failing.`)
+      break;
+  default:
+    console.log(`${letterGrade} is not an acceptable value`)
+}
 //Code Here
 
 
@@ -251,5 +277,15 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
   16
   ...
 */
-
+for (xiv = 1; xiv <=100; xiv++){
+  if (xiv%3 == 0 && xiv%5 ==0){
+    console.log(`Devmountain`)
+  }else if (xiv%5 == 0 && xiv%3 != 0){
+    console.log(`Mountain`)
+  }else if (xiv%3 == 0 && xiv%5 != 0){
+    console.log(`Dev`)
+  }else{
+    console.log(xiv)
+  }
+}
 //Code Here
