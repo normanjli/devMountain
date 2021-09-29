@@ -120,7 +120,10 @@ let passingScore = 7
 */
 
 //CODE HERE
-
+while(score<passingScore){
+  score++
+  console.log(score)
+}
 ////////// INTERMEDIATE PROBLEMS //////////
 
 ////////// PROBLEM 9 //////////
