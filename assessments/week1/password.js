@@ -9,9 +9,10 @@ const reader = readline.createInterface({
 
 reader.question("please enter a password:", function(input){
     let password = input
-    if (password.length>=10){
+    let convPass = password.split
+    if (password.length>=10 && password.search(`[^a-zA-Z\d\s]`) >= 0){
         console.log(`password is acceptable`)
-    }else if (password.length<10){
+    }else{
         console.log(`password is not acceptable`)
     }
 reader.close()
