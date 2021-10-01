@@ -20,5 +20,5 @@ let planning = `determine what role the program needs to fill, what the needs ar
 let analysis = `determine what functions are required for the program to fulfill the needs as determined in the planning step, determine what the minimun to market testing standards need to be`
 let design = `design the overall framework and individual functions of the program`
 let Implementation = `bringing the individual components which were made in the previous step and bring them together in one program`
-let Testing = `testing the progrm following integration to ensure program has robust function and will work for most consumers`
+let Testing = `testing the program following implementation to ensure program has robust function, all the elements are appropriately utilized, and will work for most consumers`
 let Maintain = `continuous maintanence of program to ensure robust function for novel use cases not discovered in the testing step or adding additional features as requested by consumer`
