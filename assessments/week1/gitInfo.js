@@ -33,7 +33,7 @@ let gitHubDefinition = `git hub is a service which contains the source control d
     following the guidelines above to describe the init command.
 */
 let init = {
-    description: `initializes a new repository in the present wroking directory`,
+    description: `initializes a new repository in the present working directory, or initializes into an existing repo in pwd`,
     code: `git init`
 } 
 
