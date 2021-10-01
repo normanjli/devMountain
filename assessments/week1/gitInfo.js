@@ -8,7 +8,7 @@
     Create a variable called 'gitDefinition'.
     It should be a string containing your best definition of what Git is.
 */
-
+let gitDefinition = `git is a source control software, used for controlling and tracking changes made to code`
 //CODE HERE
 
 //////////////////PROBLEM 2////////////////////
@@ -16,7 +16,7 @@
     Create a variable called 'gitHubDefinition'.  
     It should be a string containing your best definition of what GitHub is.
 */
-
+let gitHubDefinition = `git hub is a service which contains the source control data from git. it helps organize store and access code which is then controlled by git.`
 //CODE HERE
 
 //////////////////PROBLEMS 3 - 8////////////////////
@@ -32,6 +32,10 @@
     Create an object called 'init' with 'description' and 'code' properties 
     following the guidelines above to describe the init command.
 */
+let init = {
+    description: `initializes a new repository in the present wroking directory`,
+    code: `git init`
+} 
 
 //CODE HERE
 
@@ -42,7 +46,10 @@
 */
 
 //CODE HERE
-
+let clone = {
+    description:`creates a copy of a repository into the present working directory and creates a new branch from the original repository`,
+    code :`git clone 'repository url'`
+}
 //////////////////PROBLEM 5////////////////////
 /*
     Create an object called 'status' with 'description' and 'code' properties 
@@ -50,6 +57,10 @@
 */
 
 //CODE HERE
+let status = {
+    description:`reports on the status of git branch you are currently working on, including any unstashed changes, commits and other modification you may need to add to the repo`,
+    code: `git status`
+}
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -58,6 +69,10 @@
 */
 
 //CODE HERE
+let add = {
+    description: `adds a file to be tracked by git in the current branch/repository`,
+    code: `git add 'fileurl'`
+}
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -66,7 +81,10 @@
 */
 
 //CODE HERE
-
+let commit = {
+    description: `stashes changes made to the branch with a comment stating the reason for the changes`,
+    code: `git commit -m 'your comment here'`
+}
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -75,3 +93,8 @@
 */
 
 //CODE HERE
+let push = {
+    description: `pushes commits stashed locally to the repository`,
+    code: `git push`
+}
+console.log(init, status, push, commit, clone, add)
