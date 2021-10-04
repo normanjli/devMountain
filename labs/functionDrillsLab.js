@@ -8,7 +8,7 @@
 function helloWorld(){
   console.log (`Hello, World!`)
 }
-
+helloWorld()
 
 ////////////////// PROBLEM 2 ////////////////////
 /*
@@ -16,7 +16,10 @@ function helloWorld(){
   Ex. If 'Cameron' were passed in as the argument, Cameron would be console logged.
   Call the function, passing in an argument.
 */
-
+function printName(name){
+  console.log(name)
+}
+printName(`cameron`)
 //CODE HERE
 
 
