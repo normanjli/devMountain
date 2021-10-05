@@ -38,7 +38,7 @@ console.log(dog.name)
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
-console.log(dog[`name`])
+console.log(dog[`color`])
 
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
@@ -122,7 +122,8 @@ function greeting( obj ) {
 */
 
 function totalPopulation (obj){
-  return obj.utah+obj.california+obj.texas+obj.arizona
+  let {utah, california, texas, arizona} = obj
+  return utah+california+texas+arizona
 }
 console.log(totalPopulation({utah:20, california:50, texas: 30, arizona:25}))
 
