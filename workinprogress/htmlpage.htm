@@ -9,12 +9,12 @@
         <h1>This will open the prefix calculator window</h1><button onclick = "alertFx()">test</button>
         <button onclick = "calc()" class="button button1">Calculate</button>
         <h1>Or you can enter your input here</h1>
-           <form id = "forms">
+           <form id = "forms" onsubmit="entry()">
             <label>Operator here</label>
             <input type = "text" placeholder = "try ^/ for square root" id = "mathSymbol">
             <label>Comma separated values here</label>
             <input type = "text" placeholder = 'numbers separated by commas'id = "tokens"><br>
-            <input type = "submit" value = "Calculate" onsubmit="entry()">
+            <input type = "submit" value = "Calculate" >
           </form>
     </body>
 </html>

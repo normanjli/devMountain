@@ -49,43 +49,43 @@ function calc(){
 function entry() {
     console.log(`running`)
     alert(`running`)
-    // let mathSymbol = document.getElementById("mathSymbol").addEventListener(`onclick`,).value
-    let tokens = document.querySelector(`forms`).addEventListener(`submit`,(e) => {const formData = new FormData(e.target);})
+    let mathSymbol = document.getElementById("mathSymbol")
+    let tokens = document.getElementById(`tokens`)
     console.log(tokens)
     console.log(mathSymbol)
-    tokens = tokens.split(`,`)
-    let convTokens = []
-    for (let i = 0; i < tokens.length; i++){
-        convTokens.push(Number(tokens[i]))
-    }
-    // alert(convTokens)
-    let ans = 1
-    let sqrt = []
-	if (mathSymbol === `+`) {
-        for (let i = 0; i < convTokens.length; i++){
-            ans += convTokens[i]
-        }alert(ans-1)
-	}else if (mathSymbol === `-`){
-		for (let i = 0; i < convTokens.length; i++){
-            ans -= convTokens[i]
-        }alert(ans-1)
-	}else if (mathSymbol === `*`){
-		for (let i = 0; i < convTokens.length; i++){
-            ans *= convTokens[i]
-        }alert(ans)
-	}else if (mathSymbol === `/`){
-        for (let i = 0; i < convTokens.length; i++){
-            ans /= convTokens[i]
-        }alert(ans)
-	}else if (mathSymbol === `^/`){
-		for (let i = 0; i < convTokens.length; i++){
-             sqrt.push(convTokens[i]**.5)
-            }if (convTokens.length > 1){
-                alert(`the answers are ${sqrt}`)
-            }else{
-                alert(`the answer is ${sqrt}`)
-            }
-	}else{
-		alert (`you broke it, try entering input starting with operator then numerals seperated with commas`);
-	}
+//     tokens = tokens.split(`,`)
+//     let convTokens = []
+//     for (let i = 0; i < tokens.length; i++){
+//         convTokens.push(Number(tokens[i]))
+//     }
+//     // alert(convTokens)
+//     let ans = 1
+//     let sqrt = []
+// 	if (mathSymbol === `+`) {
+//         for (let i = 0; i < convTokens.length; i++){
+//             ans += convTokens[i]
+//         }alert(ans-1)
+// 	}else if (mathSymbol === `-`){
+// 		for (let i = 0; i < convTokens.length; i++){
+//             ans -= convTokens[i]
+//         }alert(ans-1)
+// 	}else if (mathSymbol === `*`){
+// 		for (let i = 0; i < convTokens.length; i++){
+//             ans *= convTokens[i]
+//         }alert(ans)
+// 	}else if (mathSymbol === `/`){
+//         for (let i = 0; i < convTokens.length; i++){
+//             ans /= convTokens[i]
+//         }alert(ans)
+// 	}else if (mathSymbol === `^/`){
+// 		for (let i = 0; i < convTokens.length; i++){
+//              sqrt.push(convTokens[i]**.5)
+//             }if (convTokens.length > 1){
+//                 alert(`the answers are ${sqrt}`)
+//             }else{
+//                 alert(`the answer is ${sqrt}`)
+//             }
+// 	}else{
+// 		alert (`you broke it, try entering input starting with operator then numerals seperated with commas`);
+// 	}
 }
