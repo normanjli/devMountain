@@ -88,7 +88,7 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 let {color, make, model, year} = carDetails
-// console.log(make, model, year, color)
+console.log(make, model, year, color)
 //Code Here
 
 
@@ -394,7 +394,7 @@ class Motorcycle extends vehicle{
     this.make = make
     this.isCool = isCool
     
-  } move(miles){
+  } motoMove(miles){
     super.move(miles)
   }
 }
@@ -404,6 +404,7 @@ class Motorcycle extends vehicle{
 let bike = new Motorcycle(2, `red`, 1500 ,`bmw`, true)
 //Code Here
 console.log(bike)
+bike.motoMove(150)
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
 */
