@@ -12,3 +12,11 @@ for (let i = 0; i < array.length; i++ ){
 }
 
 console.log(hasUnique(`Bob`))
+
+function hasUniqueSet(str){
+    let set = new Set (str)
+    if (set.size === str.length){
+        return true
+    }return false
+}
+console.log(hasUniqueSet(`Bob`))
