@@ -123,3 +123,4 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 const bobs = purchases.filter(array => array.owner === `Bob`).map(array=>array.price).reduce((a,c)=>a+c)
 // CODE HERE
+console.log(bobs)
