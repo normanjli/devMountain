@@ -110,11 +110,11 @@ contains(names, 'Colt', result => {
 
 // CODE HERE
 const uniq = (array, callback) => {
-  let set = new Set(array)
-  let arr= Array.from(set)
-  console.log(set)
-  console.log(arr)
-  callback(arr)
+  // let set = new Set(array)
+  // let arr= Array.from(set)
+  // console.log(set)
+  // console.log(arr)
+  callback(Array.from(new Set(array)))
 }
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -150,7 +150,7 @@ const each = (array, callback) => {
   The callback should print a string that says:
   'The item at index [INDEXPARAM] is [ITEMPARAM].'
 */
-each(names, x = (item, index) => {
+each(names, (item, index) => {
   console.log(`the item at index ${index} is ${item}`)
 })
 // CODE HERE
@@ -226,7 +226,7 @@ getUserById(users, '16t', user => {
   the two parameters together and return the sum.
 */
 const addingFactory = (num1) =>{
-  return anon1 = (num2) => num1+num2
+  return (num2) => num1+num2
 } 
 // CODE HERE
 
@@ -271,3 +271,5 @@ console.log(addTen(100))
 
 // CODE HERE
 const addNumber = addingFactory(8)
+
+

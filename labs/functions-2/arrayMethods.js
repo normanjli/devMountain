@@ -84,9 +84,9 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 // CODE HERE
-const myStrongest = monstersInYourPocket.filter(mons => mons.CP>200)
-console.log(myStrongest)
-
+const myStrongest = (y,x) => monstersInYourPocket.filter(mons => mons[y]>x)
+console.log(myStrongest('CP'))
+console.log(`5`==5)
 
 ////////// PROBLEM 5 //////////
 
