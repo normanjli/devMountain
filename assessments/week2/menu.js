@@ -29,7 +29,14 @@
     user might filter by, like 'gluten-free' or
     'kids'
 */
-
+let pizza = {
+    name:`Margherita`,
+    price:3.50,
+    category:`Entree`,
+    popularity:3,
+    rating:8,
+    tags:[`Vegetarian`, `kids`, `organic`, `locally-sourced`]
+}
 //CODE HERE
 
 
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+let  {a,price} = pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +81,8 @@
 */
 
 //CODE HERE
-
+let{b,c, category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -86,10 +95,24 @@
     tags. That way, you'll be able to use this
     data in some functions that you'll write.
 */
-
+class food{
+    constructor(name, price, category ,popularity,rating, tags){
+        this.name = name,
+        this.price = price,
+        this.category = category,
+        this.popularity = popularity,
+        this.rating = rating,
+        this.tags = tags
+}}
 //CODE HERE
-
-
+let foodArr = [ 
+    wings = new food(`wings`,2, `appetizer`, 2, 9, [`spicy`, `synthetic`, `boneless`, `locally-sourced`]),
+    meatballsub = new food(`meatball sub`, 6, `entree`,9, 5, [`saucey`, `cheesy`, `gluten free`]),
+    pepp = new food(`pepperoni`,3.5, `entree`, 1, 10, [`saucey`,`cheesy`, `hangover food`, `best selling`]),
+    fries = new food(`fries`, 1, `Side`, 2, 5, [`fried`, `potato`, `locally-sourced`]),
+    tots = new food(`tatertots`,1,`appetizer`, 1, 9, [`fried`, `potato`, `locally-sourced`])
+]
+// console.log(foodArr)
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,9 +128,9 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(tag => tag.tags.includes(`spicy`))
 
-
+// console.log (filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -149,7 +172,18 @@
 */
 
 //CODE HERE
-
+const filterByProperty = (property, number, type) => {
+    let filteredArr = []
+    if(type === `above`){
+        console.log(type)
+        return filteredArr = foodArr.filter(e =>e[property]>number)
+    }else if(type === `below`){
+        console.log(type)
+        return filteredArr = foodArr.filter(e =>e[property]<number)
+    }else{
+        return console.log(`its broke`)
+    }
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -157,5 +191,5 @@
 
     You'll have to console.log to see the filtered array
 */
-
+console.log(filterByProperty(`popularity`, 4, `below`))
 //CODE HERE
