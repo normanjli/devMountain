@@ -128,9 +128,9 @@ let foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(tag => tag.tags.includes(`spicy`))
-
-console.log (filteredFood)
+const filteredFood = (tag) => foodArr.filter(food => food.tags.includes(tag))
+let spicyFood = filteredFood(`spicy`)
+console.log (spicyFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
