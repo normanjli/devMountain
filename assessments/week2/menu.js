@@ -70,7 +70,7 @@ console.log(pizza.tags[1])
 */
 
 //CODE HERE
-let  {a,price} = pizza
+let  {price} = pizza
 console.log(price)
 
 /*
@@ -81,7 +81,7 @@ console.log(price)
 */
 
 //CODE HERE
-let{b,c, category} = pizza
+let{category} = pizza
 console.log(category)
 
 //////////////////PROBLEM 3////////////////////
@@ -130,7 +130,7 @@ let foodArr = [
 
 const filteredFood = foodArr.filter(tag => tag.tags.includes(`spicy`))
 
-// console.log (filteredFood)
+console.log (filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -175,10 +175,10 @@ const filteredFood = foodArr.filter(tag => tag.tags.includes(`spicy`))
 const filterByProperty = (property, number, type) => {
     let filteredArr = []
     if(type === `above`){
-        console.log(type)
+        // console.log(type)
         return filteredArr = foodArr.filter(e =>e[property]>number)
     }else if(type === `below`){
-        console.log(type)
+        // console.log(type)
         return filteredArr = foodArr.filter(e =>e[property]<number)
     }else{
         return console.log(`its broke`)
