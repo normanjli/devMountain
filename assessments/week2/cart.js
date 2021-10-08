@@ -35,8 +35,8 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce((a,c) => a+c.price,0)
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,9 +54,9 @@ const cart = [
 */
 
 //CODE HERE
+const calcFinalPrice = (cartTotal, couponValue, tax) => (cartTotal*(tax+1)-couponValue)
 
-
-
+console.log(calcFinalPrice(100,10,.07))
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -110,3 +110,13 @@ const cart = [
 */
 
 //CODE HERE
+let cust1 = {
+    fName: `Norman`,
+    lName: `Li`,
+    address:`2020 river road`,
+    city:`Salt Lake City`,
+    state:`UT`,
+    zip: 84123,
+    phNum:9094368446
+}
+console.log(cust1)
