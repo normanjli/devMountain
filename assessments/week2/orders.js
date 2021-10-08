@@ -30,9 +30,17 @@
 */
 
 //CODE HERE
-
-
-
+class ticket{
+    constructor(items, orderTime, customerId){
+    this.items = items
+    this.orderTime = orderTime,
+    this.customerId = customerId
+    this.status = `queued`
+    }updatestatus = (newStatus) => {
+        this.status = newStatus
+        console.log(`The order for customer ${this.customerId} is now ${this.status}`)
+    }
+}
 /*
     Create a new instance of your class.
     Save it to a variable called `firstTicket`.
@@ -43,14 +51,14 @@
     ordered at: 7:03 PM
     customer: 575
 */
-
+let order1 = new ticket([`wings`, `margh`, `pepp`], `7:03PM`, 575)
 //CODE HERE
 
-
+console.log(order1)
 /*
     Call the `updateStatus` method on
     `firstTicket` passing in the string
     'cooking'
 */
-
+order1.updatestatus(`cooking`)
 //CODE HERE
