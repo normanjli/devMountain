@@ -73,8 +73,11 @@ console.log(canWeDeliver(85213))
 */
 
 // CODE HERE
-
-
+const canWeDeliverTwo = (zipcode) => {
+  for (e of deliveryAreaZipCodes)
+    return zipcode === e ? `You're in our delivery zone!`:`Sorry, we cant deliver to that address`
+}
+console.log(canWeDeliverTwo(84123))
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
