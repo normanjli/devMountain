@@ -20,7 +20,14 @@
 */
 
 //CODE HERE
-
+class Employee{
+    constructor(name, shifts){
+        this.name = name,
+        this.shifts = shifts
+    }getSchedule = () =>{
+        console.log(`${this.name} works on ${this.shifts}`)
+    }
+}
 
 
 /*
@@ -32,14 +39,14 @@
     name: Jess
     shifts: weekday mornings, weekday afternoons
 */
-
+let empOne = new Employee(`jess`, `weekday mornings, weekday afternoons`)
 //CODE HERE
 
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
-
+empOne.getSchedule()
 //CODE HERE
 
 
@@ -54,10 +61,10 @@
     spread operator or reassign it using 
     dot or bracket notation.
 */
-
+let empTwo = {...empOne}
 //CODE HERE
-
-
+empTwo.name = `Nick`
+// console.log(empTwo)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -81,7 +88,18 @@
     The function should push the name into 
     the employees array. 
 */
-
+class Manager extends Employee{
+    constructor(name, shifts, employees){
+        super(name, shifts)
+        this.employees = employees
+    }
+    getEmployees(){
+        console.log(`${this.name}, manages ${this.employees}`)
+    }
+    addEmployee(emp){
+        this.employees.push(emp)
+    }
+}
 //CODE HERE
 
 
@@ -96,7 +114,8 @@
     shifts: weekday mornings, weekday afternoons
     employees: Cece and Schmidt
 */
-
+let man1 = new Manager(`Winston`, `weekday mornings, weekday afternoons`, [`Cece`, `Schmidt`])
+console.log(man1)
 //CODE HERE
 
 
@@ -104,7 +123,7 @@
     Call the `getEmployees` method on the
     `manager` object.  
 */
-
+man1.getEmployees()
 //CODE HERE
 
 /*
@@ -112,7 +131,7 @@
     `manager` object passing in the string 
     'Coach' or whatever name you'd like.
 */
-
+man1.addEmployee(`coach`)
 //CODE HERE 
 
 /*
@@ -120,5 +139,5 @@
     `manager` object again to confirm 
     that an employee was added.
 */
-
+man1.getEmployees()
 //CODE HERE
