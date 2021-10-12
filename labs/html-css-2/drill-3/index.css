@@ -1,0 +1,75 @@
+*{
+    margin:0px;
+    padding:0px;
+    overflow: unset;
+}
+nav{
+    background-color: gray;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.nav{
+    background-color: cornflowerblue;
+    height: 30px;
+    width: 30px;
+    padding:10px;
+    margin:20px
+}
+.article{
+    margin-left:10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 130%;
+    
+}
+.sticky{
+    height: 2000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+p{
+    text-align: center;
+    color:white;
+    margin: auto;  
+}
+.context{
+    background-color: black;
+    color:white;
+    width: 56px;
+    height: 56px;
+    font-size: 300%;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: auto;
+    margin-bottom: 0;
+    margin-top: auto;
+    position: sticky;
+    top:90vh;
+    bottom:auto;
+}
+.one{
+    background-color: cornflowerblue;
+    height: 25%;
+    width:100%;
+}
+.two{
+    background-color: cyan;
+    height: 25%;
+    width:100%;
+}
+.three{
+    background-color: greenyellow;
+    height: 25%;
+    width:100%;
+}
+.four{
+    background-color: yellow;
+    height: 25%;
+    width:100%;
+}
