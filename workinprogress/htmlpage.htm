@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Calculator</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="wip.js" defer></script>
-    </head>
-    <body>
-        <h1>This will open the prefix calculator window</h1><button onclick = "alertFx()">test</button>
-        <button onclick = "calc()" class="button button1">Calculate</button>
-        <h1>Or you can enter your input here</h1>
-           <form id = "forms" onsubmit="entry()">
-            <label>Operator here</label>
-            <input type = "text" placeholder = "try ^/ for square root" id = "mathSymbol">
-            <label>Comma separated values here</label>
-            <input type = "text" placeholder = 'numbers separated by commas'id = "tokens"><br>
-            <input type = "submit" value = "Calculate" >
-          </form>
-    </body>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>This will open the prefix calculator window</h1>
+    <button onclick="alertFx()">test</button>
+    <button onclick="calc()" class="button button1">Calculate</button>
+    <h1>Or you can enter your input here</h1>
+    <form id="forms">
+      <label>Operator here</label>
+      <select name="Operator" form="forms" id="mathSymbol">
+        <!-- <input type="text" placeholder="try ^/ for square root" id="mathSymbol" /> -->
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="^1/2">^1/2</option>
+      </select>
+      <label>Comma separated values here</label>
+      <input
+        type="text"
+        placeholder="numbers separated by commas"
+        id="tokens"
+      /><br />
+      <input type="submit" value="Calculate" id="calc" />
+    </form>
+    <p id="answer"></p>
+    <script src="wip.js" defer></script>
+  </body>
 </html>

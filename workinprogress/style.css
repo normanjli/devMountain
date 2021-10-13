@@ -1,3 +1,6 @@
+*{
+  text-align: center;
+}
 body {
     background-color: #0080ff;
 }
@@ -32,4 +35,10 @@ h1 {
 label{
   color: white;
   text-shadow: 4px solid black
+}
+#mathSymbol{
+  text-align: left;
+}
+#tokens{
+  text-align: left;
 }
