@@ -58,3 +58,22 @@ ul:hover{
 #photo{
 	max-width: 45%;
 }
+#favorites{
+	text-align: center;
+	padding:10px
+}
+#color{
+	padding: 10px;
+	background-color: yellow;
+}
+#place{
+	padding: 10px;
+	background-color: yellow;
+}
+#ritual{
+	padding: 10px;
+	background-color: yellow;
+}
+label{
+	display: block;
+}
