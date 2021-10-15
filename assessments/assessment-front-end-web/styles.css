@@ -77,3 +77,28 @@ ul:hover{
 label{
 	display: block;
 }
+#aboutWVC{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#food{
+	max-width: 45%;
+	padding:5px;
+}
+section>h3{
+	border-bottom: 1px black dashed;
+}
+#onemore{
+	display: none;
+}
+#afghan{
+	display: none;
+}#pho{
+	display: none;}
+#chick{
+	display: none;
+}#tuk{
+	display: none;
+}
