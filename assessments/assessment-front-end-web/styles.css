@@ -39,3 +39,22 @@ img {
 #hear{
 	display:inline-block;
 }
+ul{
+	width: fit-content;
+}
+ul:hover{
+	border: black solid 1px;
+	color:black
+}
+
+#AboutNorman{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+#workExp{
+	max-width: 45%;
+}
+#photo{
+	max-width: 45%;
+}
