@@ -13,7 +13,6 @@ nav {
 
 ol {
 	padding-left: 0;
-	list-style: circle;
 }
 
 .crumb {
@@ -30,7 +29,10 @@ a:visited {
 }
 
 
-input {
+.test {
+	display: block;
+}
+label{
 	display: block;
 }
 img {
@@ -38,9 +40,6 @@ img {
 }
 #hear{
 	display:inline-block;
-}
-ul{
-	width: fit-content;
 }
 ul:hover{
 	border: black solid 1px;
@@ -74,9 +73,7 @@ ul:hover{
 	padding: 10px;
 	background-color: yellow;
 }
-label{
-	display: block;
-}
+
 #aboutWVC{
 	display: flex;
 	justify-content: space-around;
