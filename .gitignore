@@ -1158,3 +1158,5 @@ demos/back-end-1-demo/client/index.html
 demos/back-end-1-demo/client/index.js
 demos/back-end-1-demo/server/server.js
 demos/back-end-1-demo/solution/server/server.js
+package-lock.json
+package.json
