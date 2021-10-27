@@ -28,7 +28,7 @@ function makePendingApptCard(appt) {
 
 function makeApptCard(appt, nextAppt) {
     const dateDisplayText = createDisplayDate(appt.date)
-
+    console.log(appt.completed)
     const apptElem = 
     `<div class="card" id="appt-${appt['appt_id']}">
         <h2>${dateDisplayText}</h2>
@@ -77,7 +77,7 @@ function getPastAppointments() {
                 const appt = res.data[i]
                 const nextAppt = res.data[i + 1] || null
                 const apptElem = makeApptCard(appt, nextAppt)
-                pastAppts.innerHTML += apptElem    
+                pastAppts.innerHTML += apptElem
             }
         })
         .catch(err => console.log(err))

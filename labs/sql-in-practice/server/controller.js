@@ -57,7 +57,7 @@ module.exports = {
     },
     getPastAppointments:(req,res)=>{
         sequelize.query(`
-        SELECT a.appt_id, a.date, a.service_type, a.notes, u.first_name, u.last_name 
+        SELECT a.appt_id, a.date, a.service_type, a.notes, u.first_name, u.last_name,a.completed 
         FROM cc_appointments a
         JOIN cc_emp_appts ea ON a.appt_id = ea.appt_id
         JOIN cc_employees e ON e.emp_id = ea.emp_id
@@ -65,7 +65,10 @@ module.exports = {
         WHERE a.approved = true AND a.completed = true
         ORDER BY a.date desc;
         `)
-        .then(dbRes => res.status(200).send(dbRes[0]))
+        .then(dbRes => {
+            console.log(dbRes[0])
+            res.status(200).send(dbRes[0])
+        })
     },
     completeAppointment:(req,res)=>{
         const {apptId} = req.body
