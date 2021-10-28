@@ -5495,3 +5495,6 @@ node_modules/xtend/LICENSE
 node_modules/xtend/mutable.js
 node_modules/xtend/README.md
 .env
+demos/python/FinalGrades.csv
+demos/python/pythondemo.py
+.vscode/settings.json
