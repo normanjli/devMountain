@@ -29,7 +29,6 @@ module.exports = {
                 rating INTEGER,
                 country_id INTEGER REFERENCES countries(country_id)
             );
-
             insert into countries (name)
             values ('Afghanistan'),
             ('Albania'),
@@ -226,16 +225,20 @@ module.exports = {
             ('Yemen'),
             ('Zambia'),
             ('Zimbabwe');
-        `).then(() => {
-            console.log('DB seeded!')
-            res.sendStatus(200)
-        }).catch(err => console.log('error seeding DB', err))
-    },
-    getCountries: (req,res)=>{
-        sequelize.query(`SELECT * FROM countries;`)
-        .then(dbRes => res.status(200).send(dbRes[0]))
-        .catch(err=>console.log(err))
-    },
+            INSERT INTO cities (name, rating, country_id)
+                VALUES('Lake Arrowhead',4, 187)
+                ('Los Angeles',3,187)
+                ('Dubai',4,78)
+            `).then(() => {
+                console.log('DB seeded!')
+                res.sendStatus(200)
+            }).catch(err => console.log('error seeding DB', err))
+        },
+        getCountries: (req,res)=>{
+            sequelize.query(`SELECT * FROM countries;`)
+            .then(dbRes => res.status(200).send(dbRes[0]))
+            .catch(err=>console.log(err))
+        },
     createCity: (req,res)=>{
         let {name, rating, countryId} = req.body
         sequelize.query(`
@@ -250,6 +253,7 @@ module.exports = {
         sequelize.query(`
         SELECT a.city_id, a.name AS city, a.rating, b.country_id, b.name AS country FROM cities a
         JOIN countries b ON a.country_id=b.country_id
+        ORDER BY rating desc
         `)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err=>console.log(err))
