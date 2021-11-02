@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+#header{
+    text-align: center;
+    margin: auto;
+}
+#code-challenges{
+    background-color: blue;
+    display:flex;
+    border: black solid 1px;
+    text-align: center;
+    margin:auto;
+    justify-content: space-evenly;
+}
+#item{
+    border:black 1px dotted;
+    box-sizing: border-box;
+    padding:10px;
+    min-width: fit-content;
+}

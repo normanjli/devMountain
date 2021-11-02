@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Challenges</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+        <div id = header>
+            <h1>Code Challenges</h1>
+        </div>
+      <main>
+          <div id = 'code-challenges'>
+            <div id = 'item'>
+                <form id="forms">
+                  <label>Comma separated values here</label>
+                  <input
+                  type="text"
+                  placeholder="numbers separated by commas"
+                  id="tokens"
+                  /><br />
+                  <label>Operator here</label>
+                    <select name="Operator" form="forms" id="mathSymbol">
+                      <option value="+">+</option>
+                      <option value="-">-</option>
+                      <option value="*">*</option>
+                      <option value="/">/</option>
+                      <option value="^/">^1/2</option>
+                    </select><br>
+                    <input type="submit" value="Calculate" id="calc" />
+                  </form>
+                  <p id="answer"></p>
+            </div>
+            <div id = 'item'>
+                <h2>Lucky Numbers</h2><br>
+              <form id='roll'>
+                <input type = 'text' placeholder="enter a number" id ='luckNum'>
+                <input type = 'submit' value = "roll" id='roll'>
+                <p id='luckNumAns'></p>
+              </form>
+            </div>
+          </div>
+      </main>
+    <script src="index.js"></script>
+  </body>
+</html>
