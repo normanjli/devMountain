@@ -15,7 +15,7 @@ const addToZero = (nums) =>{
     return false
 }
 console.log(addToZero([2,-2,5,6]))
-//space complexity is o(n) time complexity is nlogn
+//space complexity is o(n) time complexity is nlogn due to sort. if array was presorted it would be o(n)
 function hasUniqueSet(str){
     return new Set(str).size === str.length? true:false
 }
