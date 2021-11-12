@@ -24,10 +24,10 @@ console.log(hasUniqueSet(`moonday`))
 // space complexity of O(n) timecomplexity of O(n) i believe the set construction is o(n)otherwise it would be o(1)
 
 const isPangram = (sentence) =>{
-    return new Set (sentence.toLowerCase()).size===26?true:false
+    return new Set (sentence.toLowerCase().replace(/[^a-z]/g,`` )).size===26?true:false
 }
 
-console.log(isPangram(`the Quick brown fox jumped over the lazy dog`))
+console.log(isPangram(`qwertyu Iopasdfghjklzxcvbnm`))
 // space complexity of O(n) timecomplexity of O(n) i believe the set construction is o(n)otherwise it would be o(1)
 
 const longestWord = (wordsArr)=>{
