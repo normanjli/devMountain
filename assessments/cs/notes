@@ -16,6 +16,6 @@ append 536.9 μs
 
 
 runtime difference is due to the different behavior of push and unshift. Unshift mutates the entire array, therefore the function reindexes the entire array each time. 
-Because of this it simply creates new memory of for the new array each time. Unshift has a time complexity of O(n).
+Because of this it simply creates new memory of for the new array each time. Unshift has a time complexity of O(n^2)
 However, push adds to the end of the array, and does not have to reindex the array just add to the properties of the array. Preserving the memory of the array (until it has reached 
 the original allocation limit). Giving it a run time of O(n)
