@@ -1,0 +1,11 @@
+While I was working on the SPA drinks app. I used react to build this project. It originally started as a learner project in order to learn the language.
+I developed it further to my capstone projectm once I saw there was a need. I chose this tech because I wanted to experience a more modern language for web dev.
+during my time building this projhect, I learned about the intricacies of state and using state hooks to rerender components. 
+
+During my first pass at writing the search ingredients function with my app. due to api limitations I had to query the data base once each time for the 
+ingredients and then append the search results into a data structure. Initially I was doing it very basically with a fairly intensive runtime, and sometimes
+no drinks would append to the data structure. After some research and discussing with some connections, I realized that due to the nature of the inbuilt
+promise methods in axios the next query would start before the previous query was handled fully, and i would try to append an undefined object to the data
+structure. I fixed this bug by simply using an asynchronous function call the awat the get request before handling the data for each call.
+after implementation I realized that the site was much faster, and the drinks were functioning properly. 
+

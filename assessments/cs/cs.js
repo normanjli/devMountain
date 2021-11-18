@@ -14,21 +14,25 @@ const addToZero = (nums) =>{
     }
     return false//1
 }
-console.log(addToZero([2,-2,5,6]))
-//space complexity is o(n) time complexity is nlogn due to sort. if array was presorted it would be o(n)
+console.log(addToZero([20,-2,5,2,6,-22]))
+//space complexity is o(1) time complexity is nlogn due to sort. if array was presorted it would be o(n)
+//hash map/dict/set uses O(n)space complexity and time complexity
+//practice quicksort
 //nLog(n)+1+2+1N+2+1+2+1+2+1+1 = nLog(n)+N+13 lim as n approaches inf = nlog(n)
 function hasUniqueSet(str){
     return new Set(str).size === str.length? true:false//n(where n str len) +1+1+1+1+1
 }
+//check an array size alphabet against the str. then it would be o(m) where m is size of alph? try it out.
 console.log(hasUniqueSet(`moonday`)) 
-// space complexity of O(n) timecomplexity of O(n) i believe the set construction is o(n)otherwise it would be o(1)
+// space complexity of O(size of alphabet) timecomplexity of O(n) i believe the set construction is o(n)otherwise it would be o(1)
 
 const isPangram = (sentence) =>{
-    return new Set (sentence.toLowerCase().replace(/[^a-z]/g,`` )).size===26?true:false
+    return new Set (sentence.toLowerCase().replace(/[^a-z]/g,``)).size===26?true:false
 }
 
-console.log(isPangram(`qwertyu Iopasdfghjklzxcvbnm`))
-// space complexity of O(n) timecomplexity of O(n) i believe the set construction is o(n)otherwise it would be o(1)
+console.log(isPangram(`qwertyu Iopasdfghjklz21xcvbnm`))
+// space complexity of O(3n) timecomplexity of O(n) i believe the set construction is o(n) which makes this o(n) depending on how tolowercase and replace with regex functions in js
+//hash table
 
 const longestWord = (wordsArr)=>{
     let longest = 0
