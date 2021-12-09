@@ -1,0 +1,28 @@
+footer{
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  padding: .3rem;
+  justify-content:space-between;
+  align-items: flex-end;
+  position: absolute;
+  bottom:0;
+  left:-5rem;
+  background-color: #222222;
+  color:#EBEBEB;
+  font-weight: bold;
+}
+.buttons-ctnr{
+  display: flex;
+  gap:1rem;
+}
+button{
+  font-weight: inherit;
+  color: inherit;
+  background-color: #34A5DA;
+  border: unset;
+  padding: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: .75rem;
+}

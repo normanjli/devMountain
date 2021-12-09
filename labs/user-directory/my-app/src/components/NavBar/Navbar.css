@@ -1,0 +1,15 @@
+.header{
+  font-family: sans-serif;
+  font-weight: bold;
+  color:black;
+  max-width: 100vw;
+  height:5rem;
+  background-color: #34A5DA;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+.header>p:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
